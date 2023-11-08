@@ -1,0 +1,22 @@
+wear_rain_protection
+  use rain_protection(True)
+  when
+  facts.kfb.raining(True)
+
+what_to_bring_raincoast
+  use what_to_bring(raincoast)
+  when
+  rain_protection($protection)
+  facts.windy(True)
+
+what_to_bring_umbrella
+  use what_to_bring(umbrella)
+  when
+  rain_protection($protection)
+  facts.windy(False)
+
+what_to_bring_nothing
+  use what_to_bring(nothing)
+  when
+  facts.raining(False)
+  facts.windy(False)
