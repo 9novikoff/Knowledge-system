@@ -1,0 +1,14 @@
+is_raining($ans)
+	Is it raining?
+	---
+	$ans = yn
+	
+is_windy($ans)
+	Is it windy?
+	---
+	$ans = yn
+
+is_sunny($ans)
+	Is it sunny?
+	---
+	$ans = yn

@@ -1,22 +1,55 @@
-wear_rain_protection
-  use rain_protection(True)
-  when
-  facts.kfb.raining(True)
-
-what_to_bring_raincoast
-  use what_to_bring(raincoast)
-  when
-  rain_protection($protection)
-  facts.windy(True)
+what_to_bring_lightweight_waterproof_jacket
+    use what_to_bring(lightweight_waterproof_jacket)
+    when 
+        questions.is_raining(True)
+        questions.is_windy(True)
+        questions.is_sunny(True)
 
 what_to_bring_umbrella
-  use what_to_bring(umbrella)
-  when
-  rain_protection($protection)
-  facts.windy(False)
+    use what_to_bring(umbrella)
+    when 
+        questions.is_raining(True)
+        questions.is_windy(False)
+        questions.is_sunny(True)
 
-what_to_bring_nothing
-  use what_to_bring(nothing)
-  when
-  facts.raining(False)
-  facts.windy(False)
+what_to_bring_raincoat
+    use what_to_bring(raincoat)
+    when 
+        questions.is_raining(True)
+        questions.is_windy(True)
+        questions.is_sunny(False)
+
+what_to_bring_cap
+    use what_to_bring(cap)
+    when 
+        questions.is_raining(False)
+        questions.is_windy(True)
+        questions.is_sunny(True)
+
+what_to_bring_hoodie
+    use what_to_bring(hoodie)
+    when 
+        questions.is_raining(True)
+        questions.is_windy(False)
+        questions.is_sunny(False)
+
+what_to_bring_sunglasses 
+    use what_to_bring(sunglasses)
+    when 
+        questions.is_raining(False)
+        questions.is_windy(False)
+        questions.is_sunny(True)
+
+what_to_bring_jacket
+    use what_to_bring(jacket)
+    when 
+        questions.is_raining(False)
+        questions.is_windy(True)
+        questions.is_sunny(False)
+
+what_to_bring_lightweight_sweater
+    use what_to_bring(lightweight_sweater)
+    when 
+        questions.is_raining(False)
+        questions.is_windy(False)
+        questions.is_sunny(False)
